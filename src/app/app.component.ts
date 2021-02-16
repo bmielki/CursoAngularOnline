@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PrimeiroProjeto';
+  headerTitle = 'Seja bem-vindo de novo!'
 
   constructor() { }
 }
