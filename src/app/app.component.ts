@@ -5,9 +5,20 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'PrimeiroProjeto';
-  headerTitle = 'Seja bem-vindo de novo!'
+  contadorInicial = 10;
 
-  constructor() { }
+  headerTitle = 'Seja bem-vindo de novo!'
+  contador = 0;
+
+    constructor() { }
+
+
+    contadorAlterado($event: any) {
+        console.log("Contador foi alterado no app-home!")
+    }
 }
+
+

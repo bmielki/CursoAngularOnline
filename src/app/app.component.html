@@ -1,12 +1,9 @@
-<app-header [title]= "headerTitle">
+<app-header [title]= "headerTitle"> </app-header>
 
-</app-header>
+<app-home 
+    [contador] = "contadorInicial"
+    (contadorAlterado)="contadorAlterado($event)"
+></app-home>
 
-<app-home>
-
-</app-home>
-
-<app-footer>
-
-</app-footer>
+<app-footer></app-footer>
 

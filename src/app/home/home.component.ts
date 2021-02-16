@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  @Input() contador = 0;
+  @Output() contadorAlterado = new EventEmitter()
+
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
+  }
+
+  clickAumentaContador($event: any) {
+      this.contador += 1
+      this.contadorAlterado.emit($event);
+  }
+
+  clickDiminuiContador($event: any) {
+    this.contador -= 1
+    this.contadorAlterado.emit($event);
   }
 
 }
