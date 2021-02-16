@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   @Input() contador = 0;
-  @Output() contadorAlterado = new EventEmitter()
+  @Output() contadorChange = new EventEmitter()
 
   constructor() { 
     
@@ -19,12 +19,12 @@ export class HomeComponent implements OnInit {
 
   clickAumentaContador($event: any) {
       this.contador += 1
-      this.contadorAlterado.emit($event);
+      this.contadorChange.emit(this.contador);
   }
 
   clickDiminuiContador($event: any) {
     this.contador -= 1
-    this.contadorAlterado.emit($event);
+    this.contadorChange.emit(this.contador);
   }
 
 }
